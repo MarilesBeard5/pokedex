@@ -1,22 +1,21 @@
 import './salutations.css';
-import React, { useEffect, useState } from 'react'; //uso de estados para componentes tipo función
+import React, { useEffect, useState } from 'react'; //for state implementation
 
 function Salutations() {
-    //const baseEndpoint = 'https://pokeapi.co/api/v2/pokemon/';
     const [
         salutations,
         setSalutations
-    ] = useState([]); //estado inicial
+    ] = useState([]); //initial state
 
-    useEffect(() => { //representa el ciclo de vida del componente
-        async function fetchSalutations() {
+    useEffect(() => { //component lifecycle
+        async function fetchSalutations() { //async function
             const response = await fetch('/api/salutations')
             const salutations = await response.json();
             setSalutations(salutations);
             console.log('Salutations fetched: ', salutations);
         }
         fetchSalutations();
-    }, []);
+    }, []); //this will render only once (equivalent to componentDidMount() function)
 
     return (
         <div className='container'>
