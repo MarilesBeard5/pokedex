@@ -4,7 +4,11 @@
   "description": "Template for Fullstack Environment for Express & React ",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server \" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -21,5 +25,13 @@
   "bugs": {
     "url": "https://github.com/MarilesBeard5/express-react-template/issues"
   },
-  "homepage": "https://github.com/MarilesBeard5/express-react-template#readme"
+  "homepage": "https://github.com/MarilesBeard5/express-react-template#readme",
+  "dependencies": {
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
