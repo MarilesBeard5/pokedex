@@ -1,5 +1,5 @@
-# express-react-template
-Basic Template for Web App Development with MERN (MySQL, Express, React, Node JS) model.
+# pokedex
+Simple react app which consumes Pokemon's API
 This template assumes you already know the basisc of MERN model development
 After cloning the repository, cd into path/to/app and type:
 ```
@@ -10,7 +10,7 @@ To run server and client separately
 ```
     npm run server
 ```
-For server
+For server. The server does not have any code in it, it is part of the complete template used to create Fullstack applications
 ```
     npm run client
 ```
