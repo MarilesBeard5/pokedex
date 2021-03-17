@@ -1,7 +1,7 @@
 # Pokedex
 Simple react app which consumes Pokemon's API
 
-This template assumes you already know the basisc of MERN model development
+This project assumes you already know the basics of MERN model development
 After cloning the repository, cd into path/to/app and type:
 ```
     npm run client-install
