@@ -51,27 +51,38 @@ const Pokemon = ({ pokemon }) => {
                 </span>
                 </h6>
             ) : null}
-            <Card.Body className='pokeBody'>
-                <Card.Subtitle> Name: </Card.Subtitle>
-                <p>
-                    <em>
-                        {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-                    </em>
-                </p>
+            <Card.Body className='row pokeBody'>
+                <div className='col'>
+                    <Card.Subtitle> Name: </Card.Subtitle>
+                    <p>
+                        <em>
+                            {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+                        </em>
+                    </p>
 
-                <Card.Subtitle> Height: </Card.Subtitle>
-                <p>
-                    <em>
-                        {pokemon.height}
-                    </em>
-                </p>
+                    <Card.Subtitle> Base Experience: </Card.Subtitle>
+                    <p>
+                        <em>
+                            {pokemon.base_experience}
+                        </em>
+                    </p>
+                </div>
+                <div className='col'>
 
-                <Card.Subtitle> Weight: </Card.Subtitle>
-                <p>
-                    <em>
-                        {pokemon.weight}
-                    </em>
-                </p>
+                    <Card.Subtitle> Height: </Card.Subtitle>
+                    <p>
+                        <em>
+                            {pokemon.height}
+                        </em>
+                    </p>
+
+                    <Card.Subtitle> Weight: </Card.Subtitle>
+                    <p>
+                        <em>
+                            {pokemon.weight}
+                        </em>
+                    </p>
+                </div>
             </Card.Body>
             <Card.Footer>
                 <Card.Subtitle>
