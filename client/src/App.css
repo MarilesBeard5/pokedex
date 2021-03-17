@@ -1,5 +1,13 @@
-.App {
-  text-align: center;
+body {
+  background: url("./components/assets/pattern.png") repeat center top;
+}
+
+.container {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  padding-top: 5rem;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -36,3 +44,120 @@
     transform: rotate(360deg);
   }
 }
+
+.footer {
+  height: 120px;
+}
+
+.grid-container {
+  width: 80%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.button-container {
+  width: 60%;
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 10px;
+}
+
+.badges-container {
+  display: flex;
+  justify-content: center;
+}
+
+.badge-type {
+  padding: 5px 10px;
+  margin: 10px 10px 10px 0;
+  border-radius: 5px;
+}
+
+.badge-normal {
+  background-color: #a8a77a;
+}
+.badge-fire {
+  background-color: #ee8130;
+}
+.badge-water {
+  background-color: #6390f0;
+}
+.badge-electric {
+  background-color: #f7d02c;
+}
+.badge-grass {
+  background-color: #7ac74c;
+}
+.badge-ice {
+  background-color: #96d9d6;
+}
+.badge-fighting {
+  background-color: #c22e28;
+}
+.badge-poison {
+  background-color: #a33ea1;
+}
+.badge-ground {
+  background-color: #e2bf65;
+}
+.badge-flying {
+  background-color: #a98ff3;
+}
+.badge-pyschic {
+  background-color: #f95587;
+}
+.badge-bug {
+  background-color: #a6b91a;
+}
+.badge-rock {
+  background-color: #b6a136;
+}
+.badge-ghost {
+  background-color: #735797;
+}
+.badge-dragon {
+  background-color: #6f35fc;
+}
+.badge-dark {
+  background-color: #705746;
+}
+.badge-steel {
+  background-color: #b7b7ce;
+}
+.badge-fairy {
+  background-color: #d685ad;
+}
+.badge-unknown {
+  background-color: #6AA596;
+}
+.badge-shadow {
+  background-color: #705898;
+}
+
+.navbar {
+  background-color: #ef5350 !important;
+}
+
+
+.card {
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.poke-body {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+
