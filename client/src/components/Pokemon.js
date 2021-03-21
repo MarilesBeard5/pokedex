@@ -50,7 +50,7 @@ const Pokemon = ({ pokemon }) => {
                 </span>
                 </h6>
             ) : null}
-            <Card.Body className='row pokeBody'>
+            <Card.Body className='row poke-body'>
                 <div className='col'>
                     <Card.Subtitle> Name: </Card.Subtitle>
                     <p>

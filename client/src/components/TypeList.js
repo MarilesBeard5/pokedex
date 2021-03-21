@@ -5,7 +5,7 @@ const TypeList = ({ types }) => {
         <div className='badges-container'>
             {types.map((type, index) => {
                 return (
-                    <SingleType
+                    <SingleType key={'type-' + index}
                         type={type}
                     >
                     </SingleType>
