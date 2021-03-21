@@ -7,6 +7,9 @@ This project assumes you already know the basics of MERN model development, afte
     npm run client
 ```
 
+![Demo Image 1](https://github.com/MarilesBeard5/demo/demo-1.png)
+![Demo Image 2](https://github.com/MarilesBeard5/demo/demo-2.png)
+
 # Important
 The server does not have any code in it, it is part of the complete template used to create Fullstack applications
 
