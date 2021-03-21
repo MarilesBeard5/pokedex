@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import TypeList from './TypeList';
 
 import spinner from './assets/spinner.gif'
-import Row from 'react-bootstrap/Row';
 
 const Sprite = styled.img`
     width: 5em;

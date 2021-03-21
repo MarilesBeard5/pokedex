@@ -15,3 +15,11 @@ export async function getAllPokemon(url) {
             })
     });
 }
+
+export const allTypesArray = [
+    'normal', 'fire', 'water', 'electric',
+    'grass', 'ice', 'fighting', 'poison',
+    'ground', 'flying', 'psychic', 'bug',
+    'rock', 'ghost', 'dragon', 'dark',
+    'steel', 'fairy', 'unknown', 'shadow'
+];
