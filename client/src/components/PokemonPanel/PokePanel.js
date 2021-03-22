@@ -16,7 +16,7 @@ const PokePanel = ({ pokemon }) => {
                     <Tab>Game Stats</Tab>
                 </Nav>
             </TabList>
-            <TabPanel>
+            <TabPanel key='generalTab'>
                 <Card.Body>
                     <div className='col'>
                         <Card.Subtitle> Name: </Card.Subtitle>
@@ -51,17 +51,17 @@ const PokePanel = ({ pokemon }) => {
                     </div>
                 </Card.Body>
             </TabPanel>
-            <TabPanel>
+            <TabPanel key='statTab'>
                 <Card.Body>
                     {pokemon.stats.map((stat, index) => {
                         return (
-                            <Col>
+                            <Col key={'col-' + index}>
                                 <Card.Subtitle
-                                    id={'sub-' + index}>
+                                    key={'sub-' + index}>
                                     {stat.stat.name.charAt(0).toUpperCase() + stat.stat.name.slice(1)}:
                                 </Card.Subtitle>
                                 <ProgressBar
-                                    id={'prof-' + index}
+                                    key={'prog-' + index}
                                     now={stat.base_stat}
                                     label={stat.base_stat}
                                     variant={stat.base_stat > 100 ?
@@ -70,7 +70,7 @@ const PokePanel = ({ pokemon }) => {
                                         null
                                     }
                                 />
-                                <br />
+                                <br key={'br-' + index} />
                             </Col>
                         )
                     })}

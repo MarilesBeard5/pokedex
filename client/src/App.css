@@ -45,6 +45,15 @@ body {
   }
 }
 
+.poke-logo {
+  height: auto;
+  width: auto;
+  max-height: 46px;
+  max-width: 125px;
+  line-height: 46px; /* whatever the fixed height of the bar is */
+  vertical-align: middle;
+}
+
 .footer {
   height: 120px;
 }

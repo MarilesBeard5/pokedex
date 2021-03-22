@@ -1,8 +1,11 @@
-import './App.css';
 import { useState, useEffect } from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Container, Row, Navbar } from 'react-bootstrap';
+import './App.css';
+import pokemonLogo from './components/assets/logo.png';
 import PokemonList from './components/PokemonList';
+
 import { getAllPokemon, getPokemonData } from './extensions/pokemonExt';
 
 function App() {
@@ -71,7 +74,7 @@ function App() {
       <Navbar
         className='navbar navbar-expand-md fixed-top'>
         <Navbar.Brand>
-          <h3>Pokedex Demo</h3>
+          <img className='poke-logo' alt='Pokemon Logo' src={pokemonLogo}></img>
         </Navbar.Brand>
       </Navbar>
       <Row>
