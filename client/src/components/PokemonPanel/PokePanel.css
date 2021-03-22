@@ -1,0 +1,14 @@
+.react-tabs__tab-list {
+    border-bottom: none;
+    color: #ef535096;
+    
+}
+  
+.react-tabs__tab--selected {
+    color: #ef5350;
+    border-style: none;
+}
+
+.card-subtitle {
+    margin-bottom: 2px;
+}
