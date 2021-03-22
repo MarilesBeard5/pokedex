@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 
 import Card from 'react-bootstrap/Card';
-import styled from 'styled-components';
-import TypeList from './TypeList';
 
-import spinner from './assets/spinner.gif'
+import styled from 'styled-components';
+import spinner from './assets/spinner.gif';
+
+import TypeList from './TypeList';
+import PokePanel from './PokemonPanel/PokePanel';
 
 const Sprite = styled.img`
     width: 5em;
@@ -22,7 +24,7 @@ const Pokemon = ({ pokemon }) => {
     }, [pokemon])
 
     return (
-        <Card className='cusCard' style={{ width: '15rem' }}>
+        <Card style={{ width: '15rem' }}>
             {imageLoading ? (
                 <img
                     alt=''
@@ -37,52 +39,23 @@ const Pokemon = ({ pokemon }) => {
                 onLoad={() => setImageLoading(false)}
                 onError={() => setTooManyRequests(true)}
                 style={
-                    tooManyRequests
-                        ? { display: 'none' }
-                        : imageLoading
-                            ? null
+                    tooManyRequests ?
+                        { display: 'none' }
+                        : imageLoading ?
+                            null
                             : { display: 'block' }
-                } />
+                }>
+            </Sprite>
             {tooManyRequests ? (
                 <h6 className="mx-auto">
                     <span className="badge badge-danger mt-2">
                         Too Many Requests
-                </span>
+                    </span>
                 </h6>
             ) : null}
-            <Card.Body className='row poke-body'>
-                <div className='col'>
-                    <Card.Subtitle> Name: </Card.Subtitle>
-                    <p>
-                        <em>
-                            {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-                        </em>
-                    </p>
-
-                    <Card.Subtitle> Base Experience: </Card.Subtitle>
-                    <p>
-                        <em>
-                            {pokemon.base_experience}
-                        </em>
-                    </p>
-                </div>
-                <div className='col'>
-
-                    <Card.Subtitle> Height: </Card.Subtitle>
-                    <p>
-                        <em>
-                            {pokemon.height}
-                        </em>
-                    </p>
-
-                    <Card.Subtitle> Weight: </Card.Subtitle>
-                    <p>
-                        <em>
-                            {pokemon.weight}
-                        </em>
-                    </p>
-                </div>
-            </Card.Body>
+            <PokePanel
+                pokemon={pokemon}>
+            </PokePanel>
             <Card.Footer>
                 <Card.Subtitle>
                     Types:
@@ -93,6 +66,7 @@ const Pokemon = ({ pokemon }) => {
                 </TypeList>
             </Card.Footer>
         </Card >
+
     )
 }
 
