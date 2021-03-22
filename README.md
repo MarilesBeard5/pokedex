@@ -13,5 +13,10 @@ This project assumes you already know the basics of MERN model development, afte
 # Important
 The server does not have any code in it, it is part of the complete template used to create Fullstack applications
 
+# Credits
+Icons made by Darius Dan
+[Logo and Icon Author](https://www.flaticon.com/authors/darius-dan)
+from 
+[Reference Site](https://www.flaticon.com/)
 
 Happy coding!
